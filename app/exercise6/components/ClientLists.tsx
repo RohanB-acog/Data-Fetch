@@ -1,4 +1,4 @@
-// app/exercise5/components/ClientLists.tsx
+// app/exercise6/components/ClientLists.tsx
 'use client';
 import dynamic from 'next/dynamic';
 
@@ -12,7 +12,10 @@ const ClientProductList = dynamic(
   { ssr: false }
 );
 
-
+const ClientAdminList = dynamic(
+  () => import('./AdminList/client').then(mod => mod.ClientAdminList),
+  { ssr: false }
+);
 
 export function ClientLists() {
   return (
@@ -21,6 +24,7 @@ export function ClientLists() {
       <div className="space-y-6">
         <ClientUserList />
         <ClientProductList />
+        <ClientAdminList />
       </div>
     </div>
   );

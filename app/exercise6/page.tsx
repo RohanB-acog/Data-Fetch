@@ -1,7 +1,8 @@
-// app/exercise5/page.tsx
+// app/exercise6/page.tsx
 import { Suspense } from 'react';
 import { ServerUserList } from './components/UserList/server';
 import { ServerProductList } from './components/ProductList/server';
+import { ServerAdminList } from './components/AdminList/server';
 import { ClientLists } from './components/ClientLists';
 
 export default function Exercise6Page() {
@@ -20,6 +21,9 @@ export default function Exercise6Page() {
             </Suspense>
             <Suspense fallback={<div>Loading products...</div>}>
               <ServerProductList />
+            </Suspense>
+            <Suspense fallback={<div>Loading admins...</div>}>
+              <ServerAdminList />
             </Suspense>
           </div>
         </div>

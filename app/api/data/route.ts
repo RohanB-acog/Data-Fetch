@@ -1,8 +1,7 @@
-// Fix the route.ts file
 // app/api/data/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { FetcherRegistry } from '@/app/exercise5/lib/registry/FetcherRegistery';
-import { initRegistry } from '@/app/exercise5/lib/registry/initRegitry';
+import { FetcherRegistry } from '@/app/exercise6/lib/registry/FetcherRegistery';
+import { initRegistry } from '@/app/exercise6/lib/registry/initRegitry';
 // Initialize registry on the server side
 initRegistry();
 

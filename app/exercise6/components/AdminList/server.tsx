@@ -1,10 +1,10 @@
-// app/exercise5/components/UserList/server.tsx
-import { User, WithFetchingProps } from '../../types';
+// app/exercise6/components/AdminList/server.tsx
+import { Admin, WithFetchingProps } from '../../types';
 import { createServerComponent } from '../../lib/hoc/createServerComponent';
-import { ClientUserListRenderer } from './ClientRenderer';
+import { ClientAdminListRenderer } from './ClientRenderer';
 
-function UserListComponent(props: WithFetchingProps<User>) {
-  return <ClientUserListRenderer {...props} />;
+function AdminListComponent(props: WithFetchingProps<Admin>) {
+  return <ClientAdminListRenderer {...props} />;
 }
 
-export const ServerUserList = createServerComponent<User>(UserListComponent, 'users');
+export const ServerAdminList = createServerComponent<Admin>(AdminListComponent, 'admin');

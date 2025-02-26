@@ -1,4 +1,4 @@
-// app/exercise5/lib/hocs/createServerComponent.tsx
+// app/exercise6/lib/hoc/createServerComponent.tsx
 import { ComponentType } from 'react';
 import { BaseEntity, WithFetchingProps } from '../../types';
 import { FetcherRegistry } from '../registry/FetcherRegistery';
@@ -16,8 +16,8 @@ export function createServerComponent<T extends BaseEntity>(
     const FetcherClass = registry.getFetcher<T>(fetcherKey);
     
     try {
-      // Pass the fetcherKey to the constructor
-      const fetcher = new FetcherClass(fetcherKey);
+      // Create fetcher without passing arguments
+      const fetcher = new FetcherClass();
       const data = await fetcher.fetchData();
       return <WrappedComponent data={data} loading={false} error={null} />;
     } catch (error) {

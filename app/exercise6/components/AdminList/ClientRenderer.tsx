@@ -1,14 +1,14 @@
-// app/exercise5/components/UserList/ClientRenderer.tsx
+// app/exercise6/components/AdminList/ClientRenderer.tsx
 'use client';
-import { Admin, User, WithFetchingProps } from '../../types';
+import { Admin, WithFetchingProps } from '../../types';
 import { ListRenderer } from '../renderers/ListRenderer';
 import { AdminItemRenderer } from '../renderers/ItemRenderers';
 
-export function ClientAdminListRenderer(props: WithFetchingProps<User>) {
+export function ClientAdminListRenderer(props: WithFetchingProps<Admin>) {
   return (
     <ListRenderer<Admin>
       {...props}
-      title="Users"
+      title="Admins"
       renderItem={AdminItemRenderer}
     />
   );

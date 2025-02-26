@@ -1,4 +1,4 @@
-// app/exercise5/lib/data-fetchers/UserDataFetcher.ts
+// app/exercise6/lib/data-fetchers/AdminDataFetcher.tsx
 import { Admin } from "../../types";
 import { BaseDataFetcher } from "./BaseDataFetcher";
 

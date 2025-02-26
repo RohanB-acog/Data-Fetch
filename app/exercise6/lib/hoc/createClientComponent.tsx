@@ -1,4 +1,4 @@
-// app/exercise5/lib/hocs/createClientComponent.tsx
+// app/exercise6/lib/hoc/createClientComponent.tsx
 'use client';
 import { ComponentType, useEffect, useState } from 'react';
 import { BaseEntity, WithFetchingProps } from '../../types';
@@ -22,8 +22,8 @@ export function createClientComponent<T extends BaseEntity>(
     useEffect(() => {
       const registry = FetcherRegistry.getInstance();
       const FetcherClass = registry.getFetcher<T>(fetcherKey);
-      // Pass the fetcherKey to the constructor
-      const fetcher = new FetcherClass(fetcherKey);
+      // Create fetcher without passing arguments
+      const fetcher = new FetcherClass();
       
       const fetchData = async () => {
         try {
